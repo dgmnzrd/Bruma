@@ -8,14 +8,24 @@
 </head>
 
 <body>
-    <div class="navbar">
-        <button id="back">←</button>
-        <button id="forward">→</button>
-        <button id="reload">⟳</button>
-        <button id="home">🏠</button>
-        <input type="text" id="url" placeholder="https://">
-        <button id="go">Ir</button>
-        <div id="loader" class="spinner" style="display: none;"></div>
+    <div class="navbar" id="navbar">
+        <div class="drag-region">
+            <span id="title">Bruma</span>
+        </div>
+        <div class="controls">
+            <button id="back">←</button>
+            <button id="forward">→</button>
+            <button id="reload">⟳</button>
+            <button id="home">🏠</button>
+            <input id="url" type="text" placeholder="Escribe una URL o búsqueda...">
+            <button id="go">Ir</button>
+            <div id="loader" class="spinner" style="display: none;"></div>
+        </div>
+        <div class="window-buttons">
+            <button id="minimize">–</button>
+            <button id="maximize">□</button>
+            <button id="close">×</button>
+        </div>
     </div>
 
     <webview id="webview" src="https://example.com" style="width:100%; height: calc(100vh - 40px);" allowpopups

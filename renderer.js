@@ -72,3 +72,17 @@ webview.addEventListener('did-fail-load', (e) => {
 webview.addEventListener('page-title-updated', (e) => {
     document.title = e.title;
 });
+
+if (window.electronAPI) {
+    document.getElementById('minimize').addEventListener('click', () => {
+        window.electronAPI.minimize();
+    });
+    document.getElementById('maximize').addEventListener('click', () => {
+        window.electronAPI.maximize();
+    });
+    document.getElementById('close').addEventListener('click', () => {
+        window.electronAPI.close();
+    });
+} else {
+    console.warn('electronAPI no está disponible');
+}
