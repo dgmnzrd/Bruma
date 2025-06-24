@@ -1,0 +1,15 @@
+{
+  "name": "bruma",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "Navegador ligero Bruma hecho con Electron",
+  "devDependencies": {
+    "electron": "^36.5.0"
+  }
+}

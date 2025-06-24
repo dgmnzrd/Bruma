@@ -1,0 +1,25 @@
+body {
+    margin: 0;
+    font-family: 'Helvetica Neue', sans-serif;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    background: linear-gradient(to right, #111827, #1f2937);
+    color: white;
+    height: 40px;
+}
+
+.navbar button,
+.navbar input {
+    margin: 0 5px;
+    padding: 6px;
+    border-radius: 6px;
+    border: none;
+}
+
+#url {
+    flex: 1;
+}

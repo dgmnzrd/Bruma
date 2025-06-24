@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Bruma</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="navbar">
+        <button id="back">←</button>
+        <button id="forward">→</button>
+        <button id="reload">⟳</button>
+        <input type="text" id="url" placeholder="https://">
+        <button id="go">Ir</button>
+    </div>
+
+    <webview id="webview" src="https://example.com" style="width:100%; height: calc(100vh - 40px);" allowpopups
+        webpreferences="contextIsolation=yes"></webview>
+
+    <script src="renderer.js"></script>
+</body>
+
+</html>
