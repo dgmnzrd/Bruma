@@ -51,3 +51,24 @@ webview.addEventListener('did-navigate-in-page', () => {
 webview.addEventListener('did-finish-load', () => {
     urlInput.value = webview.getURL();
 });
+
+const loader = document.getElementById('loader');
+
+webview.addEventListener('did-start-loading', () => {
+    loader.style.display = 'inline-block';
+});
+webview.addEventListener('did-stop-loading', () => {
+    loader.style.display = 'none';
+});
+
+document.getElementById('home').addEventListener('click', () => {
+    webview.loadURL('https://example.com'); // cambia a tu página inicial preferida
+});
+
+webview.addEventListener('did-fail-load', (e) => {
+    webview.loadURL('data:text/html,<h1 style="text-align:center;">❌ Error cargando la página</h1><p style="text-align:center;">' + e.errorDescription + '</p>');
+});
+
+webview.addEventListener('page-title-updated', (e) => {
+    document.title = e.title;
+});
